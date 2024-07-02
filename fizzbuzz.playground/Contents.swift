@@ -6,16 +6,23 @@ import UIKit
 
 
 // % Remainder operator. a % b returns what's left over (the remainder) after dividing b into a.
-// && logical and operator. True if values left and right of && are true
+
+
+//Each time we go through the loop we start with three empty strings
+//Check if we have a Fizz, Buzz, or number, and update the Strings, accordingly
+//If a String doesnt match a condition, its an empty String so we don't see a value printed.
+
 
 for i in 1...100 {
-    if i % 3 == 0 && i % 5 == 0 {
-        print("FizzBuzz")
-    } else if i % 3 == 0 {
-        print("Fizz")
-    } else if i % 5 == 0 {
-        print("Buzz")
-    } else {
-        print(i)
+    var fizz = "", buzz = "", iString = ""
+    if i % 3 == 0 {
+        fizz = "Fizz"
     }
+    if i % 5 == 0 {
+        buzz = "Buzz"
+    }
+    if (fizz+buzz).count == 0 {
+        iString = String(i)
+    }
+    print(iString+fizz+buzz)
 }
